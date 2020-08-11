@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: meta-store
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: eks-metadata-endpoint
+  namespace: meta-store
+spec:
+  template:
+    metadata:
+      name: eks-metadata-endpoint
+    spec:
+      containers:
+        - name: ${IMAGE_NAME}
+          image: ${REGISTRY}:latest
+      restartPolicy: Never
