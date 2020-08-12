@@ -1,4 +1,4 @@
-# meta-role-checker
+# aws-meta-role-checker
 A tool to run on your AWS ECS and/or EKS clusters with the purpose to check whether account keys are accessible through the metadata service and identify whether any over-privileged roles are being used run the workloads. This way you can take measures in order to switch to less privileged roles or block access to metadata or credential endpoints altogether.
 
 This tool will build a container, store the image in AWS ECR and deploy it in an already running EKS cluster. For ECS, it will register tasks for none, bridge, host and awsvpc (EC2 and Fargate) modes so that you can then freely choose to run any or all of them in any existing or new ECS cluster.
