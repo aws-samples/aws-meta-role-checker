@@ -31,7 +31,7 @@ To build the artifacts on an existing EKS cluster, run the following command:
 make BUILD_CLUSTER=EKS
 ```
 
-To build the artifacts for an ECS cluster, to which you can assign the resulting tasks, run the following command:
+To build the necassary artifacts for an ECS cluster, to which you can manually assign the resulting tasks, run the following command:
 ```shell
 make BUILD_CLUSTER=ECS
 ```
@@ -50,7 +50,7 @@ kubectl logs -n meta-store eks-metadata-endpoint-[xxxxxx]
 For ECS deployments, search the generated logs prefixed by metadata/containerlogs in the metadata CloudWatch log group.
 
 ## Cleaning
-To clean everything, run:
+To clean up the built resources, run:
 
 ```shell
 make clean
