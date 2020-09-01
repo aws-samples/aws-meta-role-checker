@@ -1,4 +1,4 @@
-ACCOUNT_ID?=304955174079
+ACCOUNT_ID?=111222333444
 REGION?=eu-west-1
 
 REPO?=metadata-endpoint
